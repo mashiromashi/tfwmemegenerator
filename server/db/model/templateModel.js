@@ -7,7 +7,8 @@ const templateModel = new Schema({
   path: { type: string },
   box_count: { type: integer },
   width: { type: integer },
-  height: { type: integer }
+  height: { type: integer },
+  file_type: { type: string }
 });
 
 export default mongoose.model("template", templateModel);
