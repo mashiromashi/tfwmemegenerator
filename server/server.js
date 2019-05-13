@@ -5,7 +5,9 @@ const cors = require("cors");
 const global_template_path = require("./util/path");
 const fs = require("fs");
 const app = express();
-const templateArray = [];
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://");
 
 var publicDir = require("path").join(__dirname, "/burmeseTemplates");
 app.use("/burmeseTemplates", express.static(publicDir));

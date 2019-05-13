@@ -11,6 +11,10 @@ let templateModelSchema = new Schema({
   file_type: String
 });
 
-let templateModel = mongoose.model("template", templateModelSchema);
+let templateModel = mongoose.model(
+  "burmeseTemplates",
+  templateModelSchema,
+  "burmeseTemplates"
+);
 
 module.exports = templateModel;
