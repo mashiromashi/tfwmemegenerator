@@ -1,14 +1,16 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-const Schema = mongoose.Schema;
-const templateModel = new Schema({
-  id: { type: integer },
-  name: { type: string },
-  path: { type: string },
-  box_count: { type: integer },
-  width: { type: integer },
-  height: { type: integer },
-  file_type: { type: string }
+let Schema = mongoose.Schema;
+let templateModelSchema = new Schema({
+  _id: Number,
+  name: String,
+  path: String,
+  box_count: Number,
+  width: Number,
+  height: Number,
+  file_type: String
 });
 
-export default mongoose.model("template", templateModel);
+let templateModel = mongoose.model("template", templateModelSchema);
+
+module.exports = templateModel;
