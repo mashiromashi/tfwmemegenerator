@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import { request, METHODS } from "http";
-//import { url } from "inspector";
 import { base_url } from "./util/global_path";
+import NavBar from "./components/navBar";
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +15,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    //url = "localhost:3001/burmesetemplates/buddha.jpg";
     fetch(`${base_url}/images/getimagelist`, {
       method: "GET"
     })
@@ -32,6 +31,7 @@ class App extends Component {
     let { images } = this.state;
     return (
       <div>
+        <NavBar />
         {images.map((img, index) => {
           return (
             <img
