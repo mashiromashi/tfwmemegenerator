@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+import { Button } from "react-bootstrap";
 class editTemplate extends Component {
   state = {};
   render() {
     return (
       <React.Fragment>
-        <button />
+        <Button variant="secondary" size="lg">
+          Generate
+        </Button>
       </React.Fragment>
     );
   }
