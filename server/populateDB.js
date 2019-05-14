@@ -50,3 +50,5 @@ for (let i = 0; i < templateNameArray.length; i++) {
   }).save();
   console.log("Template inserted");
 }
+
+module.exports = populateDB;
