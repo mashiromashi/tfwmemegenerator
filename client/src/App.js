@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavBar />
-        <EditTemplate />
+        <GetAllTemplates />
       </React.Fragment>
     );
   }

@@ -7,12 +7,15 @@ import {
   Button,
   NavDropdown
 } from "react-bootstrap";
+import GetAllTemplates from "./getAllTemplates";
 class navBar extends Component {
   render() {
     return (
       <div>
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Navbar.Brand href="#home">>tfw meme generator</Navbar.Brand>
+          <Navbar.Brand href={<GetAllTemplates />}>
+            >tfw meme generator
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">

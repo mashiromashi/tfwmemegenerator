@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
+//import reactCanvas from "react-canvas";
+import { base_url } from "./util/global_path";
 
 class editTemplate extends Component {
   constructor(props) {
     super(props);
     this.state = {
       topText: "",
-      bottomText: ""
+      bottomText: "",
+      currentlySelected: 0
     };
+    this.templates = [];
+
     this._handleBottomTextChange = this._handleBottomTextChange.bind(this);
     this._handleTopTextChange = this._handleTopTextChange.bind(this);
     this._handleTextRemoval = this._handleTextRemoval.bind(this);
@@ -37,6 +42,8 @@ class editTemplate extends Component {
     }
   }
 
+  _handleGenerateImage() {}
+
   render() {
     let { topText, bottomText } = this.state;
     return (
@@ -56,14 +63,14 @@ class editTemplate extends Component {
           maxLength="30"
           value={bottomText}
           onChange={this._handleBottomTextChange}
-          placeholder="Enter Bottom"
+          placeholder="Enter Bottom Text"
           type="text"
         />
         <Button onClick={() => this._handleTextRemoval("bottomText")}>
           Remove Text
         </Button>
         <br />
-        <Button> Generate</Button>
+        <Button onClick={this._handleGenerateImage}> Generate</Button>
       </React.Fragment>
     );
   }
